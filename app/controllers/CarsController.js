@@ -4,6 +4,8 @@ import { getFormData } from "../utils/FormHandler.js"
 import { Pop } from "../utils/Pop.js"
 import { setHTML } from "../utils/Writer.js"
 
+// NOTE this is a private fn... industry/best practice is to name these functions with an '_' in front
+// NOTE this is 'private' because it is declared OUTSIDE of the class... think of this as a background process
 function _drawCars() {
     let cars = AppState.cars
     let content = ''
@@ -13,11 +15,12 @@ function _drawCars() {
 }
 
 export class CarsController {
+    // NOTE if we want something to happen as soon as this controller mounts (page loads), put it here
     constructor() {
         console.log('hello from the cars controller')
         console.log('we got cars', AppState.cars)
         _drawCars()
-        AppState.on('cars', _drawCars) //NOTE this is a 'listener' whenever AppState.cars changes, call _drawCars()
+        AppState.on('cars', _drawCars) //NOTE this is a 'listener' for AppState.cars --> if AppState.cars emits or changes, invoke _drawCars()
     }
 
     createCar() {
@@ -49,9 +52,10 @@ export class CarsController {
 
     async deleteCar(carId) {
         // NOTE we use await here to WAIT for the response before we run the next lines of code
+        // NOTE we will be going over async/await in depth next week
         if (await Pop.confirm("Are you sure you want to remove this car?")) {
             console.log('deleting', carId)
-            carsService.deleteCar(carId)
+            carsService.deleteCar(carId) //NOTE pass the id from the onclick to the service to perform business logic
         }
     }
 

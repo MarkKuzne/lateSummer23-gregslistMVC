@@ -25,14 +25,21 @@ export const router = [
     // NOTE this is essentially the HTML 'template' that is draw to the about page but has been abstracted to its own file in the views folder
     view: AboutView
   },
+  // TODO for the students: start here for houses page
+  // {
+  //   path:
+  //   controllers:
+  //   view:
+  // },
   {
     path: '#/cars',
-    // NOTE controller is the interface layer that we want the user to interact with 
+    // NOTE controller is the interface layer that the user interacts with 
     controller: CarsController,
     // NOTE view is what is injected to the HTML: what we see on the page
     view: CarsView
 
-    // NOTE: this got abstracted to CarsView
+    // NOTE: this got abstracted to CarsView ⬇️⬇️
+
     //   /*html*/`
     //   <div class="container-fluid">
     // <section class="row">
@@ -115,17 +122,7 @@ export const router = [
     //         </div>
     //       </div>
     //     </div> -->
-
     //   </section>
-
-
     //   </div>`
-  },
-
-  // TODO for the students: start here for houses page
-  // {
-  //   path: 
-  //   controllers:
-  //   view:
-  // }
+  }
 ]
