@@ -4,6 +4,8 @@ import { HomeController } from "./controllers/HomeController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { AboutView } from "./views/AboutView.js";
 import { CarsView } from "./views/CarsView.js";
+import { HousesController } from "./controllers/HousesController.js"
+import { HousesView } from "./views/HousesView.js";
 
 
 export const router = [
@@ -25,12 +27,11 @@ export const router = [
     // NOTE this is essentially the HTML 'template' that is draw to the about page but has been abstracted to its own file in the views folder
     view: AboutView
   },
-  // TODO for the students: start here for houses page
-  // {
-  //   path:
-  //   controllers:
-  //   view:
-  // },
+  {
+    path: '#/houses',
+    controller: HousesController,
+    view: HousesView,
+  },
   {
     path: '#/cars',
     // NOTE controller is the interface layer that the user interacts with 

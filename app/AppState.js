@@ -1,6 +1,8 @@
 import { Car } from "./models/Car.js"
+import { House } from "./models/House.js"
 import { Value } from "./models/Value.js"
 import { EventEmitter } from "./utils/EventEmitter.js"
+import { generateId } from "./utils/generateId.js"
 import { isValidProp } from "./utils/isValidProp.js"
 import { loadState } from "./utils/Store.js"
 
@@ -58,6 +60,32 @@ class ObservableAppState extends EventEmitter {
   init() {
 
   }
+
+  houses = [
+    new House(
+      {
+        id: generateId(),
+        year: 1959,
+        name: 'Old House',
+        bedrooms: 8,
+        bathrooms: 2,
+        sqft: 2500,
+        price: 156000,
+        description: 'very very old house, it stinks and looks like it stinks',
+        imgUrl: 'https://images.unsplash.com/photo-1592658221410-0f5c3615e7fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      }),
+    new House({
+      id: generateId(),
+      year: 1999,
+      name: 'Newer House',
+      bedrooms: 3,
+      bathrooms: 1,
+      sqft: 1200,
+      price: 230000,
+      description: 'Unlike the last house, this one does not stink and actually smells amazing. No pets allowed tho.',
+      imgUrl: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+    }
+    )]
 
 }
 
