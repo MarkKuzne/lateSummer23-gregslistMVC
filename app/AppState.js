@@ -85,6 +85,18 @@ class ObservableAppState extends EventEmitter {
       description: 'Unlike the last house, this one does not stink and actually smells amazing. No pets allowed tho.',
       imgUrl: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
     }
+    ),
+    new House({
+      id: generateId(),
+      year: 1889,
+      name: 'Shak',
+      bedrooms: 1,
+      bathrooms: 0,
+      sqft: 300,
+      price: 300,
+      description: 'Ugly stinky shak',
+      imgUrl: 'https://media.istockphoto.com/id/538509975/photo/ruined-shed.jpg?s=612x612&w=0&k=20&c=795nNk41Bptp9OBADrv7ZrowKrFWqntT1SmKRISr7ps=',
+    }
     )]
 
 }
