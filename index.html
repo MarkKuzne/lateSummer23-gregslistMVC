@@ -43,13 +43,60 @@
   <!-- SECTION -->
   <main id="router-view">
     <!-- PRIMARY VIEWPORT -->
-    <div id="houses">
-
-    </div>
   </main>
-
-
-
+  <!-- house form -->
+  <div class="div houses-form-container m-0 p-0 container-fluid">
+    <section class="row m-0 p-0 container-fluid">
+      <div class="col-12 p-0 m-0">
+        <form onsubmit="app.HousesController.createHouse()">
+          <section class="row p-0 m-0">
+            <div class="col-12 col-md-6 p-0 m-0 mt-3">
+              <input type="text" class="form-control" placeholder="Listing Title" name="houseName">
+            </div>
+            <div class="col-12 col-md-6 p-0 m-0 mt-3">
+              <input type="text" class="form-control" placeholder="House Age" name="houseYear">
+            </div>
+          </section>
+          <section class="row p-0 m-0">
+            <div class="col-12 col-md-6 p-0 m-0 mt-3">
+              <input type="text" class="form-control" placeholder="Bedroom Amount" name="houseBedrooms">
+            </div>
+            <div class="col-12 col-md-6 p-0 m-0 mt-3">
+              <input type="text" class="form-control" placeholder="Bathroom Amount" name="houseBathrooms">
+            </div>
+          </section>
+          <section class="row p-0 m-0">
+            <div class="col-12 col-md-6 p-0 m-0 mt-3">
+              <input type="text" class="form-control" placeholder="Square Footage" name="houseSqft">
+            </div>
+            <div class="col-12 col-md-6 p-0 m-0 mt-3">
+              <input type="text" class="form-control" placeholder="Asking Price" name="housePrice">
+            </div>
+          </section>
+          <section class="row p-0 m-0">
+            <div class="col-12 col-md-6 p-0 m-0 mt-3">
+              <textarea required maxLength="144" class="form-control" placeholder="House description"
+                name="houseDescription" style="height: 37px"></textarea>
+            </div>
+            <div class="col-12 col-md-6 p-0 m-0 mt-3">
+              <input type="text" class="form-control" placeholder="House Image URL" name="houseImgUrl">
+            </div>
+            <div class="col-12 p-0 m-0">
+              <div class="d-flex flex-row justify-content-center my-3">
+                <button class="btn btn-dark" type="submit">Submit
+                  Listing</button>
+              </div>
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>
+  </div>
+  <!-- house form -->
+  <div class="div p-0 m-0 container-fluid">
+    <section class="row p-0 m-0 container-fluid" id="houses">
+    </section>
+  </div>
 
 
   <!-- SECTION -->
@@ -65,8 +112,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
     integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
-  <script src="app/App.js" type="module"></script>
-
+  <script src="./app/App.js" type="module" defer></script>
 </body>
 
 </html>
